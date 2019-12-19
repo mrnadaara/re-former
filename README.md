@@ -1,24 +1,16 @@
-# README
+# Re-Former Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## This is a simple Rails application which uses Rails Form helper methods to generate HTML forms that works in conjunction with Rails
 
-Things you may want to cover:
+* Ruby version: 2.6.4-2.6.5
 
-* Ruby version
+* Clone the project and install dependencies ``` bundle install ```
 
-* System dependencies
+* Start the server ``` rails s ```
 
-* Configuration
+* Test out ``` localhost:3000/users/new ``` or ``` localhost:3000/users/:id/edit ``` to see the forms in action
 
-* Database creation
+## Collaborators
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Tresor Bireke (@Tresor11) <br>
+Sharmarke Ahmed (@mrnadaara)
