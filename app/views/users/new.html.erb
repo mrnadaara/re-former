@@ -27,8 +27,19 @@
 <%
 =end%>
 
+<% if @user.errors.any? %>
+<div>
+  Please resolve the following issues:
+  <ul>
+    <% @user.errors.full_messages.each do |e|%>
+      <li><%=e%></li>
+    <% end%>
+  </ul>
+</div>
+<% end %>
+
  <%= form_for(@user) do |f| %>
- <%= f.label :user_name%>
+    <%= f.label :user_name%>
     <%= f.text_field :user_name %>
     <%= f.label :email%>
     <%= f.text_field :email%>
