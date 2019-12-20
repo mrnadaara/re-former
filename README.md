@@ -13,5 +13,5 @@
 
 ## Collaborators
 
-<a url="https://github.com/Tresor11"></a> Tresor11<br>
+<a href="https://github.com/Tresor11"></a> Tresor Bireke<br>
 Sharmarke Ahmed (@mrnadaara)
