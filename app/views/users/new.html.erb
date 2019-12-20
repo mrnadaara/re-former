@@ -1,0 +1,49 @@
+ <%
+=begin%>
+ <form accept-charset="UTF-8" action="/users" method="post">
+  <label for="user[user_name]">User_name: </label>
+  <input type="text" name="user[user_name]"><br>
+  <label for="user[name]"> email: </label>
+  <input type="email" name="user[email]"><br>
+  <label for="user[password]"> password: </label>
+  <input type="password" name="user[password]"> <br>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input name='commit' type="submit" value="Submit">
+</form>  
+<%
+=end%>
+
+<%
+=begin%>
+ <%= form_tag( '/users' , method: "post") do%>
+<%= label_tag(:user_name, 'user_name:') %>
+<%= text_field_tag(:user_name) %>
+<%= label_tag(:email, 'Email:') %>
+<%= text_field_tag(:email) %>
+<%= label_tag(:password, 'password') %>
+<%= password_field_tag(:password) %>
+<%=submit_tag('submit')%>
+<% end %> 
+<%
+=end%>
+
+<% if @user.errors.any? %>
+<div>
+  Please resolve the following issues:
+  <ul>
+    <% @user.errors.full_messages.each do |e|%>
+      <li><%=e%></li>
+    <% end%>
+  </ul>
+</div>
+<% end %>
+
+ <%= form_for(@user) do |f| %>
+    <%= f.label :user_name%>
+    <%= f.text_field :user_name %>
+    <%= f.label :email%>
+    <%= f.text_field :email%>
+    <%= f.label :password%>
+    <%= f.password_field :password %>
+    <%= f.submit "submit" %>
+  <% end %>
