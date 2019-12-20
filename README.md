@@ -8,7 +8,8 @@
 
 * Start the server ``` rails s ```
 
-* Test out ``` localhost:3000/users/new ``` or ``` localhost:3000/users/:id/edit ``` to see the forms in action
+* Test out ``` localhost:3000/users/new ``` to register as a new user
+ or ``` localhost:3000/users/:id/edit ``` to edit an existing user by providing the id in the URL
 
 ## Collaborators
 
